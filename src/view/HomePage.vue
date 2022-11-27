@@ -1,5 +1,6 @@
 <template>
   <div id="HomePage">
+    <Header></Header>
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -58,10 +59,12 @@
             >>
             <el-table-column prop="num" label="项目类型" align="center">
             </el-table-column>
-            <el-table-column prop="pro1" label="加固设计" align="center">
+            <el-table-column prop="pro1" label="项目地点" align="center">
             </el-table-column>
           </el-table>
-          <a class="btn btn-lg btn-block btn-info" @click="goTo">查看更多</a>
+          <a class="btn btn-lg btn-block btn-info" @click="goTo(1, software)"
+            >查看更多</a
+          >
         </div>
       </div>
     </div>
@@ -100,7 +103,9 @@
             </div>
           </div>
         </div>
-        <a class="btn btn-lg btn-block btn-info" @click="goToMore">查看更多</a>
+        <a class="btn btn-lg btn-block btn-info" @click="goToMore(2, service)"
+          >查看更多</a
+        >
       </div>
     </div>
     <!-- 为什么选择我们 -->
@@ -241,12 +246,17 @@ export default {
         document.body.scrollTop;
       this.scrollTop = scrollTop;
     },
-    goToMore() {
+    goToMore(index, name) {
       this.$router.push({ path: "/service" });
+      this.navIndex = index;
+      sessionStorage.setItem("navIndex", index);
+      this.menuName = name;
     },
-    goTo() {
+    goTo(index, name) {
       this.$router.push({ path: "/software/smartTown" });
-       this.navIndex = index;
+      this.navIndex = index;
+      sessionStorage.setItem("navIndex", index);
+      this.menuName = name;
     }
   },
   destroyed() {

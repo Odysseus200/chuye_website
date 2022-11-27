@@ -1,93 +1,96 @@
 <template>
-  <div id="root">
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/1.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+  <div>
+    <Header></Header>
+    <div id="root">
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/1.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/10.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/10.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/11 (2).jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/11 (2).jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/11.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/11.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/13.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/13.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/12.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/12.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/44.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/44.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/14.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/14.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/22.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/22.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/33.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/33.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/5.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/5.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/6.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/6.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/7.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/7.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/8.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/8.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img class="itemImg" src="../assets/img/ctru/9.jpg" alt="" />
-      <div class="userInfo">
-        <span class="username">现场实拍</span>
+      <div class="item">
+        <img class="itemImg" src="../assets/img/ctru/9.jpg" alt="" />
+        <div class="userInfo">
+          <span class="username">现场实拍</span>
+        </div>
       </div>
     </div>
   </div>

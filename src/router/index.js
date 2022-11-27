@@ -118,14 +118,6 @@ export default new Router({
           meta: {
             title: '相关服务'
           }
-        },
-        {
-          path: '/test',
-          name: 'test',
-          component: resolve => require(['@/view/test'],resolve),
-          meta: {
-            title: '相关服务'
-          }
         }
       ]
     }

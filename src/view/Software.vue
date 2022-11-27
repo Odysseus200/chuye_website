@@ -1,23 +1,28 @@
 <template>
-  <div id="Software" class="container">
-    <div class="row">
-      <div id="left" class="col-md-4 col-xs-12">
-        <ul class="left-container wow bounceInLeft">
-          <p>案例类型</p>
-          <li v-for="(item, index) in softwareList" :key="index">
-            <router-link :to="item.path">{{ item.name }}</router-link>
-          </li>
-        </ul>
-      </div>
-      <div id="right" class="col-md-8 col-xs-12  wow bounceInRight">
-        <router-view></router-view>
+  <div>
+    <Header></Header>
+    <div id="Software" class="container">
+      <div class="row">
+        <div id="left" class="col-md-4 col-xs-12">
+          <ul class="left-container wow bounceInLeft">
+            <p>案例类型</p>
+            <li v-for="(item, index) in softwareList" :key="index">
+              <router-link :to="item.path">{{ item.name }}</router-link>
+            </li>
+          </ul>
+        </div>
+        <div id="right" class="col-md-8 col-xs-12  wow bounceInRight">
+          <router-view></router-view>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { WOW } from "wowjs";
+import Header from "../components/Header.vue";
 export default {
+  components: { Header },
   name: "Software",
   data() {
     return {

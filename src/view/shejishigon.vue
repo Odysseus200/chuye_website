@@ -8,9 +8,9 @@
       fit
       size="medium"
       >>
-      <el-table-column prop="num" label="项目类型" align="center">
+      <el-table-column prop="num" label="序号" align="center">
       </el-table-column>
-      <el-table-column prop="pro2" label="加固施工" align="center">
+      <el-table-column prop="pro2" label="项目地点" align="center">
       </el-table-column>
     </el-table>
   </div>
