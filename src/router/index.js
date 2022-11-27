@@ -27,7 +27,7 @@ export default new Router({
           name: 'software',
           component: resolve => require(['@/view/Software'], resolve),
           meta: {
-            title: '软件产品'
+            title: '工程案例'
           },
           children: [
             {
@@ -39,7 +39,7 @@ export default new Router({
               name: 'software',
               component: resolve => require(['@/view/Software_smartTown'], resolve),
               meta: {
-                title: '软件产品丨智能小镇管理系统'
+                title: '工程案例丨加固设计'
               }
             },
             {
@@ -47,9 +47,33 @@ export default new Router({
               name: 'software',
               component: resolve => require(['@/view/Software_bigData'], resolve),
               meta: {
-                title: '软件产品丨大数据管理系统'
+                title: '工程案例丨加固施工'
               }
-            }
+            },
+            {
+              path: '/software/shejishigon',
+              name: 'software',
+              component: resolve => require(['@/view/shejishigon'], resolve),
+              meta: {
+                title: '工程案例丨加固设计施工'
+              }
+            },
+            {
+              path: '/software/newDesign',
+              name: 'software',
+              component: resolve => require(['@/view/newDesign'], resolve),
+              meta: {
+                title: '工程案例丨加固施工'
+              }
+            },
+            {
+              path: '/software/newCustra',
+              name: 'software',
+              component: resolve => require(['@/view/newCustra'], resolve),
+              meta: {
+                title: '工程案例丨加固施工'
+              }
+            },
           ]
         }, {
           path: '/service',
@@ -91,6 +115,14 @@ export default new Router({
           path: '/servicedetail',
           name: 'servicedetail',
           component: resolve => require(['@/view/ServiceDetail'],resolve),
+          meta: {
+            title: '相关服务'
+          }
+        },
+        {
+          path: '/test',
+          name: 'test',
+          component: resolve => require(['@/view/test'],resolve),
           meta: {
             title: '相关服务'
           }

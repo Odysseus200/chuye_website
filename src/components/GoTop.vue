@@ -31,7 +31,7 @@ export default {
   height: 50px;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 0px;
   z-index: 99999999;
   cursor: pointer;
 }

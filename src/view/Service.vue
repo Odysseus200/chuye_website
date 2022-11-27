@@ -1,143 +1,160 @@
 <template>
-    <div id="Service">
-        <div class="container text-center">
-            <h3>我们的服务</h3>
-            <p style="color:#b2b2b2">The Best Service You Never See</p>
-        </div>
-        <div class="container">
-            <div class="Service-container row">
-                <div class="Service-item col-xs-12 col-sm-6 col-md-3 wow slideInUp" 
-                v-for="(item,index) in serviceList" :key="index" @click="ServiceClick(item.id)">
-                    <div class="Service-item-wrapper">
-                        <div class="Service-item-top">
-                            <h4>{{item.title}}</h4>
-                            <i></i>
-                            <p>{{item.eng_title}}</p>
-                        </div>
-                        <div class="Service-item-img">
-                            <img :src="item.img" alt="服务">
-                        </div>
-                        <div class="Service-item-border"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div id="root">
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/1.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
     </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/10.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/11 (2).jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/11.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/13.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/12.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/44.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/14.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/22.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/33.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/5.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/6.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/7.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/8.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+    <div class="item">
+      <img class="itemImg" src="../assets/img/ctru/9.jpg" alt="" />
+      <div class="userInfo">
+        <span class="username">现场实拍</span>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script>
-import { WOW } from 'wowjs';
-export default {
-    name: 'Service',
-    data(){
-        return{
-            serviceList: [
-                {
-                    id: 'section-1',
-                    title: '软件定制开发',
-                    eng_title: 'Customize App',
-                    img: require('@/assets/img/service1.jpg')
-                },{
-                    id: 'section-2',
-                    title: 'IT外包服务',
-                    eng_title: 'Outsourcing',
-                    img: require('@/assets/img/service2.jpg')
-                },{
-                    id: 'section-3',
-                    title: '网上商城建设',
-                    eng_title: 'eCommerce Site',
-                    img: require('@/assets/img/service3.jpg')
-                },{
-                    id: 'section-4',
-                    title: 'iOS应用定制开发',
-                    eng_title: 'iOS App Dev',
-                    img: require('@/assets/img/service4.jpg')
-                }
-            ]
-        }
-    },
-    mounted(){
-        var wow = new WOW();
-        wow.init();
-    },
-    methods:{
-        ServiceClick(id){
-            this.$router.push({
-                name: 'servicedetail',
-                params: {
-                    id: id
-                }
-            })
-        }
-    }
-}
+export default {};
 </script>
+
 <style scoped>
-.Service-container{
-    padding: 30px 50px;
+/* css样式 */
+body {
+  background: #e5e5e5;
 }
-.Service-item{
-    margin-bottom: 50px;
+/* 瀑布流最外层 */
+#root {
+  margin: 0 auto;
+  width: 1200px;
+  column-count: 5;
+  column-width: 240px;
+  column-gap: 20px;
 }
-.Service-item-wrapper{
-    cursor: pointer;
-    background: rgba(244,244,244,1);
-    overflow: hidden;
-    position: relative;
+/* 每一列图片包含层 */
+.item {
+  margin-bottom: 10px;
+  /* 防止多列布局，分页媒体和多区域上下文中的意外中断 */
+  break-inside: avoid;
+  background: #fff;
 }
-.Service-item-top{
-    width: 100%;
-    height: 120px;
-    padding: 30px;
-    text-align: center;
+.item:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.Service-item-top>i{
-    display: inline-block;
-    width: 25px;
-    height: 2px;
-    background: #28f;
+/* 图片 */
+.itemImg {
+  width: 100%;
+  vertical-align: middle;
 }
-.Service-item-top>p{
-    color: #b2b2b2;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all .5s ease;
+/* 图片下的信息包含层 */
+.userInfo {
+  padding: 5px 10px;
 }
-.Service-item-img{
-    width: 100%;
-    overflow: hidden;
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
-.Service-item-img img{
-    width: 100%;
-    transition: all 0.5s ease;
+.username {
+  margin-left: 5px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.Service-item-border{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 9999999;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease;
-    border: 1px solid #000;
-    opacity: 0;
+@media screen and (max-width: 768px) {
+  #root {
+    margin: 10px auto;
+    width: 370px;
+    column-count: 1;
+    column-width: 240px;
+    column-gap: 0px;
+  }
 }
-.Service-item-wrapper:hover .Service-item-top > i{
-    opacity: 0;
-}
-.Service-item-wrapper:hover .Service-item-top > p{
-    opacity: 1;
-    transform: translateY(-10px);
-}
-.Service-item-wrapper:hover .Service-item-img > img{
-    transform: scale(1.1,1.1);
-}
-.Service-item-wrapper:hover > .Service-item-border{
-    opacity: 1;
-    width: 90%;
-    height: 90%;
+@media screen and (min-width: 768px) and (max-width: 996px) {
+  #root {
+    margin: 0 auto;
+    width: 700px;
+    column-count: 5;
+    column-width: 240px;
+    column-gap: 10px;
+  }
 }
 </style>
-

@@ -5,38 +5,40 @@
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>888-888-888
-          <span class="glyphicon glyphicon-envelope"></span>liyunkun_11@163.com
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
+          <span class="glyphicon glyphicon-earphone"></span
+          ><span @click="call1">13888969543（太总）</span>
+          <span class="glyphicon glyphicon-earphone"></span
+          ><span @click="call2">13888518267（倪总）</span>
+          <span class="glyphicon glyphicon-time"></span
+          >上午：9：00--12：00，下午：2：00--17：30；
         </div>
       </div>
     </div>
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
-      <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png">
+      <div class="header-nav-logo" @click="goToindex(0, home)">
+        <img src="@/assets/img/logo.jpg" />
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
         <li
-          v-for="(item,index) in navList"
+          v-for="(item, index) in navList"
           :key="index"
-          :class="index==navIndex?'active':''"
-          @click="navClick(index,item.name)"
+          :class="index == navIndex ? 'active' : ''"
+          @click="navClick(index, item.name)"
         >
           <router-link :to="item.path">
-            {{item.name}}
-            <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span>
+            {{ item.name }}
+            <span
+              v-if="item.children.length > 0"
+              class="glyphicon glyphicon-menu-down"
+            ></span>
             <i class="underline"></i>
           </router-link>
-          <dl v-if="item.children.length>0">
-            <dt v-for="(i,n) in item.children" :key="n">
-              <router-link :to="i.path">{{i.name}}</router-link>
+          <dl v-if="item.children.length > 0">
+            <dt v-for="(i, n) in item.children" :key="n">
+              <router-link :to="i.path">{{ i.name }}</router-link>
             </dt>
           </dl>
         </li>
@@ -45,11 +47,15 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logo_black.png" alt="logo">
+        <img
+          class="center-block"
+          src="@/assets/img/logo_black.png"
+          alt="logo"
+        />
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
-        {{menuName}}
+        {{ menuName }}
         <div
           class="header-nav-m-menu-wrapper"
           data-toggle="collapse"
@@ -61,15 +67,15 @@
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse">
           <li
-            v-for="(item,index) in navList"
+            v-for="(item, index) in navList"
             :key="index"
-            :class="index==navIndex?'active':''"
-            @click="navClick(index,item.name)"
+            :class="index == navIndex ? 'active' : ''"
+            @click="navClick(index, item.name)"
             data-toggle="collapse"
             data-target="#menu"
           >
             <router-link :to="item.path">
-              {{item.name}}
+              {{ item.name }}
               <i class="underline"></i>
             </router-link>
           </li>
@@ -83,7 +89,9 @@ export default {
   name: "Header",
   data() {
     return {
-      navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
+      navIndex: sessionStorage.getItem("navIndex")
+        ? sessionStorage.getItem("navIndex")
+        : 0,
       menuName: "首页",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
@@ -93,26 +101,38 @@ export default {
           children: []
         },
         {
-          name: "软件产品",
+          name: "工程实例",
           path: "/software",
           children: [
             {
-              name: "智能小镇管理系统",
+              name: "加固设计",
               path: "/software/smartTown"
             },
             {
-              name: "大数据管理系统",
+              name: "加固施工",
               path: "/software/bigData"
+            },
+            {
+              name: "加固设计施工",
+              path: "/software/shejishigon"
+            },
+            {
+              name: "新建设计",
+              path: "/software/newDesign"
+            },
+            {
+              name: "新建施工",
+              path: "/software/newCustra"
             }
           ]
         },
         {
-          name: "相关服务",
+          name: "现场实例",
           path: "/service",
           children: []
         },
         {
-          name: "新闻动态",
+          name: "公司动态",
           path: "/newsinformation",
           children: []
         },
@@ -135,9 +155,21 @@ export default {
     };
   },
   methods: {
+    goToindex(index, name) {
+      this.$router.push({ path: "/home" });
+      this.navIndex = index;
+      sessionStorage.setItem("navIndex", index);
+      this.menuName = name;
+    },
+    call1() {
+      window.location.href = "tel:/" + 13888969543;
+    },
+    call2() {
+      window.location.href = "tel:/" + 13888518267;
+    },
     navClick(index, name) {
       this.navIndex = index;
-      sessionStorage.setItem('navIndex',index)
+      sessionStorage.setItem("navIndex", index);
       this.menuName = name;
     },
     menuClick() {
@@ -153,19 +185,27 @@ export default {
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
+  background: #ffffff;
   transition: all ease 0.6s;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 #header .header-top {
   height: 50px;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
+  text-align: center;
   line-height: 50px;
   background: #474747;
 }
-/* 顶部的图标 */
+.pull-left {
+  float: none !important;
+}
+/* 顶部的图标文字 */
 #header .header-top span {
   margin: 0 8px;
+  cursor: pointer;
 }
 /* 导航栏 */
 #header .header-nav {
@@ -177,11 +217,12 @@ export default {
   height: 100%;
   float: left;
   position: relative;
+  cursor: pointer;
 }
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 95px;
-  height: 45px;
+  width: 280px;
+  height: 110px;
   position: absolute;
   top: 0;
   left: 0;
@@ -220,9 +261,9 @@ export default {
   bottom: -2px;
   left: 50%;
   width: 0;
-  height: 2px;
+  height: 5px;
   opacity: 0;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
   background-color: #1e73be;
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
