@@ -23,55 +23,55 @@ export default new Router({
             title: '首页'
           }
         }, {
-          path: '/software',
-          name: 'software',
-          component: resolve => require(['@/view/Software'], resolve),
+          path: '/Example',
+          name: 'Example',
+          component: resolve => require(['@/view/Example'], resolve),
           meta: {
             title: '工程案例'
           },
           children: [
             {
-              path: '/software',
-              redirect: '/software/smartTown'
+              path: '/Example',
+              redirect: '/Example/ReinforcementDesign'
             },
             {
-              path: '/software/smartTown',
-              name: 'software',
-              component: resolve => require(['@/view/Software_smartTown'], resolve),
+              path: '/Example/ReinforcementDesign',
+              name: 'Example',
+              component: resolve => require(['@/view/ReinforcementDesign'], resolve),
               meta: {
                 title: '工程案例丨加固设计'
               }
             },
             {
-              path: '/software/bigData',
-              name: 'software',
-              component: resolve => require(['@/view/Software_bigData'], resolve),
+              path: '/Example/Construction',
+              name: 'Example',
+              component: resolve => require(['@/view/Construction'], resolve),
               meta: {
                 title: '工程案例丨加固施工'
               }
             },
             {
-              path: '/software/shejishigon',
-              name: 'software',
+              path: '/Example/shejishigon',
+              name: 'Example',
               component: resolve => require(['@/view/shejishigon'], resolve),
               meta: {
                 title: '工程案例丨加固设计施工'
               }
             },
             {
-              path: '/software/newDesign',
-              name: 'software',
+              path: '/Example/newDesign',
+              name: 'Example',
               component: resolve => require(['@/view/newDesign'], resolve),
               meta: {
-                title: '工程案例丨加固施工'
+                title: '工程案例丨新建设计'
               }
             },
             {
-              path: '/software/newCustra',
-              name: 'software',
+              path: '/Example/newCustra',
+              name: 'Example',
               component: resolve => require(['@/view/newCustra'], resolve),
               meta: {
-                title: '工程案例丨加固施工'
+                title: '工程案例丨新建施工'
               }
             },
           ]

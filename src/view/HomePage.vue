@@ -31,18 +31,15 @@
       <div class="row bigData-container">
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
           <video
+            oncanplay="this.volume = 0.3"
             style="width: 100%; height:auto; "
             src="../assets/img/视频.mp4"
-            loop
             webkit-playsinline="true"
             x5-playsinline=""
             x5-video-player-type="h5"
             x5-video-player-fullscreen="true"
             playsinline="true"
-            preload="auto"
             controls
-            autoplay
-            muted
           ></video>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
@@ -62,7 +59,7 @@
             <el-table-column prop="pro1" label="项目地点" align="center">
             </el-table-column>
           </el-table>
-          <a class="btn btn-lg btn-block btn-info" @click="goTo(1, software)"
+          <a class="btn btn-lg btn-block btn-info" @click="goTo(1, Example)"
             >查看更多</a
           >
         </div>
@@ -174,6 +171,11 @@ export default {
         {
           num: "新建施工",
           pro1: "昆钢2#地下消防水池"
+        },
+        {
+          num: "新建设计",
+
+          pro1: "昆钢建材行车桩基础"
         }
       ],
       swiperList: [
@@ -253,7 +255,7 @@ export default {
       this.menuName = name;
     },
     goTo(index, name) {
-      this.$router.push({ path: "/software/smartTown" });
+      this.$router.push({ path: "/Example/ReinforcementDesign" });
       this.navIndex = index;
       sessionStorage.setItem("navIndex", index);
       this.menuName = name;

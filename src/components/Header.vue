@@ -47,11 +47,7 @@
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img
-          class="center-block"
-          src="@/assets/img/logo_black.png"
-          alt="logo"
-        />
+        <img class="center-block" src="@/assets/img/logo.jpg" alt="logo" />
       </div>
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
@@ -102,27 +98,27 @@ export default {
         },
         {
           name: "工程实例",
-          path: "/software",
+          path: "/Example",
           children: [
             {
               name: "加固设计",
-              path: "/software/smartTown"
+              path: "/Example/ReinforcementDesign"
             },
             {
               name: "加固施工",
-              path: "/software/bigData"
+              path: "/Example/Construction"
             },
             {
               name: "加固设计施工",
-              path: "/software/shejishigon"
+              path: "/Example/shejishigon"
             },
             {
               name: "新建设计",
-              path: "/software/newDesign"
+              path: "/Example/newDesign"
             },
             {
               name: "新建施工",
-              path: "/software/newCustra"
+              path: "/Example/newCustra"
             }
           ]
         },
@@ -197,7 +193,7 @@ export default {
   font-size: 14px;
   text-align: center;
   line-height: 50px;
-  background: #474747;
+  background: #262627;
 }
 .pull-left {
   float: none !important;
@@ -332,8 +328,8 @@ export default {
   }
   /* 导航栏logo图片 */
   #header .header-nav-m .header-nav-m-logo img {
-    width: 95px;
-    height: 45px;
+    width: 280px;
+    height: 125px;
     position: absolute;
     top: 0;
     left: 0;

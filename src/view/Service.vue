@@ -128,6 +128,11 @@ body {
   width: 100%;
   vertical-align: middle;
 }
+.itemImg:hover {
+  transform: scale(2.05);
+  box-shadow: 0 0 10px #0000001a;
+  border-radius: 2%;
+}
 /* 图片下的信息包含层 */
 .userInfo {
   padding: 5px 10px;
