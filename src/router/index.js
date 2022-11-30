@@ -9,7 +9,6 @@ export default new Router({
       redirect: '/'
     }, {
       path: '/',
-      name: 'PageView',
       component: resolve => require(['@/view/PageView'], resolve),
       children: [
         {
@@ -36,7 +35,7 @@ export default new Router({
             },
             {
               path: '/Example/ReinforcementDesign',
-              name: 'Example',
+              name: 'Example_ReinforcementDesign',
               component: resolve => require(['@/view/ReinforcementDesign'], resolve),
               meta: {
                 title: '工程案例丨加固设计'
@@ -44,7 +43,7 @@ export default new Router({
             },
             {
               path: '/Example/Construction',
-              name: 'Example',
+              name: 'Example_Construction',
               component: resolve => require(['@/view/Construction'], resolve),
               meta: {
                 title: '工程案例丨加固施工'
@@ -52,7 +51,7 @@ export default new Router({
             },
             {
               path: '/Example/shejishigon',
-              name: 'Example',
+              name: 'Example_shejishigon',
               component: resolve => require(['@/view/shejishigon'], resolve),
               meta: {
                 title: '工程案例丨加固设计施工'
@@ -60,7 +59,7 @@ export default new Router({
             },
             {
               path: '/Example/newDesign',
-              name: 'Example',
+              name: 'Example_newDesign',
               component: resolve => require(['@/view/newDesign'], resolve),
               meta: {
                 title: '工程案例丨新建设计'
@@ -68,7 +67,7 @@ export default new Router({
             },
             {
               path: '/Example/newCustra',
-              name: 'Example',
+              name: 'Example_newCustra',
               component: resolve => require(['@/view/newCustra'], resolve),
               meta: {
                 title: '工程案例丨新建施工'

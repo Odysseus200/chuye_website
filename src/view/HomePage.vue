@@ -60,7 +60,7 @@
             </el-table-column>
           </el-table>
           <a class="btn btn-lg btn-block btn-info" @click="goTo(1, Example)"
-            >查看更多</a
+            >查看更多工程案例</a
           >
         </div>
       </div>
@@ -101,7 +101,7 @@
           </div>
         </div>
         <a class="btn btn-lg btn-block btn-info" @click="goToMore(2, service)"
-          >查看更多</a
+          >查看更多现场实例</a
         >
       </div>
     </div>
@@ -220,22 +220,22 @@ export default {
         {
           logo: require("@/assets/img/ctru/1.jpg"),
           title: "核心优势1",
-          content: "<p>由专业客服提供人工服务</p>负责疑难问题和故障受理"
+          content: ""
         },
         {
           logo: require("@/assets/img/computer.png"),
           title: "核心优势2",
-          content: "<p>利用远程视频工具，提供协助</p>帮助客户进行调试、解决故障"
+          content: ""
         },
         {
           logo: require("@/assets/img/qq.png"),
           title: "核心优势3",
-          content: "<p>利用企业QQ提供在线解答</p>帮助企业快速准确解决问题和故障"
+          content: ""
         },
         {
           logo: require("@/assets/img/skill.png"),
           title: "核心优势4",
-          content: "<p>由技术支持工程师，负责问题解答</p>需求受理及故障受理"
+          content: ""
         }
       ]
     };
@@ -475,7 +475,7 @@ export default {
     margin: 10px 0 10px;
   }
   #contactUs {
-    height: 200px;
+    height: 100px;
     transition: all ease 0.6s;
   }
   #contactUs .contactUs-container {
@@ -508,8 +508,8 @@ export default {
     font-weight: bold;
   }
   #customer .customer-logo img {
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    height: 320px;
   }
   #customer .customer-block {
     padding: 30px;

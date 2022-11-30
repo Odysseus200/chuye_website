@@ -1,11 +1,11 @@
 <template>
   <div id="footer" class="container-fluid">
     <p class="title">云南楚业建筑工程有限公司</p>
-    <p class="address_tel_fax">
-      <span>地址：中国（云南）自由贸易试验区昆明片区经开区春漫大道</span>
-      <span @click="call1">Tel：13888969543（太总）</span>
-      <span @click="call2">Tel：13888518267（倪总）</span>
-    </p>
+    <p class="address_tel_fax"></p>
+    <p>地址：中国（云南）自由贸易试验区昆明片区经开区</p>
+    <p>春漫大道云南海归创业园海归大厦</p>
+    <span @click="call1">Tel:13888969543（太总）</span>
+    <span @click="call2">Tel:13888518267（倪总）</span>
     <p class="copy">Copyright &copy;2022云南楚业建筑工程有限公司</p>
   </div>
 </template>

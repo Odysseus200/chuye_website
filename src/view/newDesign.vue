@@ -8,9 +8,14 @@
       fit
       size="medium"
       >>
-      <el-table-column prop="num" label="序号" align="center">
+      <el-table-column prop="num" label="序号" align="center" width="70px">
       </el-table-column>
-      <el-table-column prop="pro4" label="项目地点" align="center">
+      <el-table-column
+        prop="pro4"
+        label="项目地点"
+        align="center"
+        show-overflow-tooltip
+      >
       </el-table-column>
     </el-table>
   </div>

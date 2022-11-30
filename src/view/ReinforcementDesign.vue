@@ -1,15 +1,13 @@
 <template>
   <div id="smartTown">
     <h2>加固设计案例</h2>
-    <el-table :data="tableData" style="font-size: 19px;" stripe size="medium"
-      >>
-      <el-table-column prop="num" label="序号" align="center" width="58px">
+    <el-table :data="tableData" style="font-size: 19px;" stripe size="medium">
+      <el-table-column prop="num" label="序号" align="center" width="70px">
       </el-table-column>
       <el-table-column
         prop="pro1"
         label="项目地点"
         align="center"
-        width="299px"
         show-overflow-tooltip
       >
       </el-table-column>
