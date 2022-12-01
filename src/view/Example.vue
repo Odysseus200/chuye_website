@@ -51,7 +51,7 @@ export default {
     };
   },
   mounted() {
-    var wow = new WOW();
+    var wow = new WOW({ live: false });
     wow.init();
   }
 };

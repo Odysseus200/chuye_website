@@ -17,7 +17,7 @@
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
-      <div class="header-nav-logo" @click="goToindex(0, home)">
+      <div class="header-nav-logo" @click="goToindex(0, '首页')">
         <img src="@/assets/img/logo.jpg" />
       </div>
       <!-- 导航内容 -->
@@ -152,10 +152,12 @@ export default {
   },
   methods: {
     goToindex(index, name) {
-      this.$router.push({ path: "/home" });
       this.navIndex = index;
-      sessionStorage.setItem("navIndex", index);
+      window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
+      this.$router.push("/").catch(err => {
+        return err;
+      });
     },
     call1() {
       window.location.href = "tel:/" + 13888969543;
@@ -165,7 +167,7 @@ export default {
     },
     navClick(index, name) {
       this.navIndex = index;
-      sessionStorage.setItem("navIndex", index);
+      window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
     },
     menuClick() {

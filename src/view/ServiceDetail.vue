@@ -7,19 +7,23 @@
           <ul class="nav nav-tabs nav-stacked center-block" id="myNav">
             <p>特色服务</p>
             <li
-              :class="item.id==id?'active':''"
-              v-for="(item,index) in serviceNavList"
+              :class="item.id == id ? 'active' : ''"
+              v-for="(item, index) in serviceNavList"
               :key="index"
             >
-              <a :href="'#'+item.id">{{item.title}}</a>
+              <a :href="'#' + item.id">{{ item.title }}</a>
             </li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 content  wow zoomIn">
-          <div class="content-block" v-for="(item,index) in serviceContentList" :key="index">
+          <div
+            class="content-block"
+            v-for="(item, index) in serviceContentList"
+            :key="index"
+          >
             <h2 :id="item.id">
-              {{item.title}}
-              <small>/ {{item.eng_title}}</small>
+              {{ item.title }}
+              <small>/ {{ item.eng_title }}</small>
             </h2>
             <div v-html="item.content"></div>
           </div>
@@ -94,7 +98,7 @@ export default {
         top: 300
       }
     });
-    var wow = new WOW();
+    var wow = new WOW({ live: false });
     wow.init();
   }
 };

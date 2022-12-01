@@ -94,7 +94,7 @@ export default {
     };
     var infoWindow = new BMap.InfoWindow("云南楚业建筑工程有限公司", opts); // 创建信息窗口对象
     map.openInfoWindow(infoWindow, map.getCenter()); // 打开信息窗口
-    var wow = new WOW();
+    var wow = new WOW({ live: false });
     wow.init();
   }
 };

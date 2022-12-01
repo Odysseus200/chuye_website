@@ -1,6 +1,6 @@
 <template>
   <div id="HomePage">
-    <Header></Header>
+    <Header ref="Index"></Header>
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -69,7 +69,7 @@
             >
             </el-table-column>
           </el-table>
-          <a class="btn btn-lg btn-block btn-info" @click="goTo(1, Example)"
+          <a class="btn btn-lg btn-block btn-info" @click="goTo(1, '工程实例')"
             >点击查看更多</a
           >
         </div>
@@ -110,7 +110,9 @@
             </div>
           </div>
         </div>
-        <a class="btn btn-lg btn-block btn-info" @click="goToMore(2, service)"
+        <a
+          class="btn btn-lg btn-block btn-info"
+          @click="goToMore(2, '现场实例')"
           >点击查看更多</a
         >
       </div>
@@ -154,6 +156,10 @@ import Swiper from "swiper";
 import { WOW } from "wowjs";
 export default {
   name: "HomePage",
+  beforeRouteUpdate(to, from, next) {
+    console.log(to, from, next);
+    next();
+  },
   data() {
     return {
       scrollTop: null,
@@ -259,16 +265,16 @@ export default {
       this.scrollTop = scrollTop;
     },
     goToMore(index, name) {
-      this.$router.push({ path: "/service" });
       this.navIndex = index;
-      sessionStorage.setItem("navIndex", index);
+      window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
+      this.$router.push({ path: "/service" });
     },
     goTo(index, name) {
-      this.$router.push({ path: "/Example/ReinforcementDesign" });
       this.navIndex = index;
-      sessionStorage.setItem("navIndex", index);
+      window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
+      this.$router.push({ path: "/Example/ReinforcementDesign" });
     }
   },
   destroyed() {
