@@ -26,20 +26,5 @@ export default {
 };
 </script>
 <style scoped>
-#GoTop {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  right: 20px;
-  bottom: 0px;
-  z-index: 99999999;
-  cursor: pointer;
-}
-#GoTop > span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: rgb(8, 162, 233);
-  font-size: 30px;
-}
+@import "../assets/css/global.css";
 </style>
