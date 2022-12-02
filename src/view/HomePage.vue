@@ -1,6 +1,6 @@
 <template>
   <div id="HomePage">
-    <Header ref="Index"></Header>
+    <Header></Header>
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -265,12 +265,14 @@ export default {
       this.scrollTop = scrollTop;
     },
     goToMore(index, name) {
+      window.sessionStorage.removeItem("navIndex", index);
       this.navIndex = index;
       window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
       this.$router.push({ path: "/service" });
     },
     goTo(index, name) {
+      window.sessionStorage.removeItem("navIndex", index);
       this.navIndex = index;
       window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;

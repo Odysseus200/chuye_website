@@ -1,30 +1,26 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-Vue.use(Router)
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+import HomePage from '../view/HomePage.vue'
 
-export default new Router({
-  routes: [
+ const routes = [
     {
       path: '*',
       redirect: '/'
     }, {
-      path: '/',
-      component: resolve => require(['@/view/PageView'], resolve),
-      children: [
-        {
           path: '/',
           redirect: '/home'
         }, {
           path: '/home',
           name: 'home',
-          component: resolve => require(['@/view/HomePage'], resolve),
+          component: HomePage,
           meta: {
             title: '首页'
           }
         }, {
           path: '/Example',
           name: 'Example',
-          component: resolve => require(['@/view/Example'], resolve),
+          component: ()=> import('@/view/Example'),
           meta: {
             title: '工程案例'
           },
@@ -36,7 +32,7 @@ export default new Router({
             {
               path: '/Example/ReinforcementDesign',
               name: 'Example_ReinforcementDesign',
-              component: resolve => require(['@/view/ReinforcementDesign'], resolve),
+              component: () => import('@/view/ReinforcementDesign'),
               meta: {
                 title: '工程案例丨加固设计'
               }
@@ -44,7 +40,7 @@ export default new Router({
             {
               path: '/Example/Construction',
               name: 'Example_Construction',
-              component: resolve => require(['@/view/Construction'], resolve),
+              component: () => import('@/view/Construction'),
               meta: {
                 title: '工程案例丨加固施工'
               }
@@ -52,7 +48,7 @@ export default new Router({
             {
               path: '/Example/shejishigon',
               name: 'Example_shejishigon',
-              component: resolve => require(['@/view/shejishigon'], resolve),
+              component:() => import('@/view/shejishigon'),
               meta: {
                 title: '工程案例丨加固设计施工'
               }
@@ -60,7 +56,7 @@ export default new Router({
             {
               path: '/Example/newDesign',
               name: 'Example_newDesign',
-              component: resolve => require(['@/view/newDesign'], resolve),
+              component: () => import('@/view/newDesign'),
               meta: {
                 title: '工程案例丨新建设计'
               }
@@ -68,7 +64,7 @@ export default new Router({
             {
               path: '/Example/newCustra',
               name: 'Example_newCustra',
-              component: resolve => require(['@/view/newCustra'], resolve),
+              component: () => require('@/view/newCustra'),
               meta: {
                 title: '工程案例丨新建施工'
               }
@@ -77,35 +73,35 @@ export default new Router({
         }, {
           path: '/service',
           name: 'service',
-          component: resolve => require(['@/view/Service'], resolve),
+          component: () => import('@/view/Service'),
           meta: {
             title: '相关服务'
           }
         }, {
           path: '/newsinformation',
           name: 'newsinformation',
-          component: resolve => require(['@/view/NewsInformation'], resolve),
+          component: () => import('@/view/NewsInformation'),
           meta: {
             title: '新闻动态'
           }
         }, {
           path: '/companyintroduction',
           name: 'companyintroduction',
-          component: resolve => require(['@/view/CompanyIntroduction'], resolve),
+          component: () => import('@/view/CompanyIntroduction'),
           meta: {
             title: '公司介绍'
           }
         }, {
           path: '/jobchance',
           name: 'jobchance',
-          component: resolve => require(['@/view/JobChance'], resolve),
+          component: () => import('@/view/JobChance'),
           meta: {
             title: '工作机会'
           }
         }, {
           path: '/contactus',
           name: 'contactus',
-          component: resolve => require(['@/view/ContactUs'], resolve),
+          component: ()=> import('@/view/ContactUs'),
           meta: {
             title: '联系我们'
           }
@@ -113,12 +109,26 @@ export default new Router({
         {
           path: '/servicedetail',
           name: 'servicedetail',
-          component: resolve => require(['@/view/ServiceDetail'],resolve),
+          component: () => import('@/view/ServiceDetail'),
           meta: {
             title: '相关服务'
           }
         }
       ]
-    }
-  ]
-})
+  const router = new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
+  })
+
+ router.beforeEach((to, from, next) => {
+    console.log('到哪去to:', to)
+    console.log('从哪来from:', from)
+
+    // 标题栏内容 = 新页面的标题
+    document.title = to.meta.title
+
+    // 调用后, 放行本次操作, 路由才能跳转
+    next()
+  })
+  export default router

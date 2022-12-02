@@ -81,19 +81,19 @@ export default {
     return {};
   },
   mounted() {
-    var map = new BMap.Map("map"); // 创建地图实例
-    var point = new BMap.Point(102.834768, 24.961793); // 创建点坐标
-    map.centerAndZoom(point, 18); // 初始化地图，设置中心点坐标和地图级别
-    map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
-    var marker = new BMap.Marker(point); // 创建标注
-    map.addOverlay(marker); // 将标注添加到地图中
-    var opts = {
-      width: 50, // 信息窗口宽度
-      height: 10, // 信息窗口高度
-      title: "海归大厦" // 信息窗口标题
-    };
-    var infoWindow = new BMap.InfoWindow("云南楚业建筑工程有限公司", opts); // 创建信息窗口对象
-    map.openInfoWindow(infoWindow, map.getCenter()); // 打开信息窗口
+    // var map = new BMap.Map("map"); // 创建地图实例
+    // var point = new BMap.Point(102.834768, 24.961793); // 创建点坐标
+    // map.centerAndZoom(point, 18); // 初始化地图，设置中心点坐标和地图级别
+    // map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+    // var marker = new BMap.Marker(point); // 创建标注
+    // map.addOverlay(marker); // 将标注添加到地图中
+    // var opts = {
+    //   width: 50, // 信息窗口宽度
+    //   height: 10, // 信息窗口高度
+    //   title: "海归大厦" // 信息窗口标题
+    // };
+    // var infoWindow = new BMap.InfoWindow("云南楚业建筑工程有限公司", opts); // 创建信息窗口对象
+    // map.openInfoWindow(infoWindow, map.getCenter()); // 打开信息窗口
     var wow = new WOW({ live: false });
     wow.init();
   }

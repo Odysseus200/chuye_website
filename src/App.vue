@@ -2,14 +2,19 @@
   <div id="app">
     <!-- <Header></Header> -->
     <router-view />
-    <Footer></Footer>
+    <Footer />
     <!-- <GoTop></GoTop> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  methods: {
+    showRoute() {
+      console.log("$route:", this.$route);
+    }
+  }
 };
 </script>
 

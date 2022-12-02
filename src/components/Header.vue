@@ -152,6 +152,7 @@ export default {
   },
   methods: {
     goToindex(index, name) {
+      sessionStorage.clear();
       this.navIndex = index;
       window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
@@ -166,6 +167,7 @@ export default {
       window.location.href = "tel:/" + 13888518267;
     },
     navClick(index, name) {
+      sessionStorage.clear();
       this.navIndex = index;
       window.sessionStorage.setItem("navIndex", index);
       this.menuName = name;
