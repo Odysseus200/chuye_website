@@ -64,7 +64,7 @@ import HomePage from '../view/HomePage.vue'
             {
               path: '/Example/newCustra',
               name: 'Example_newCustra',
-              component: () => require('@/view/newCustra'),
+              component: () => import('@/view/newCustra'),
               meta: {
                 title: '工程案例丨新建施工'
               }
@@ -105,14 +105,6 @@ import HomePage from '../view/HomePage.vue'
           meta: {
             title: '联系我们'
           }
-        },
-        {
-          path: '/servicedetail',
-          name: 'servicedetail',
-          component: () => import('@/view/ServiceDetail'),
-          meta: {
-            title: '相关服务'
-          }
         }
       ]
   const router = new VueRouter({
@@ -122,8 +114,8 @@ import HomePage from '../view/HomePage.vue'
   })
 
  router.beforeEach((to, from, next) => {
-    console.log('到哪去to:', to)
-    console.log('从哪来from:', from)
+    // console.log('到哪去to:', to)
+    // console.log('从哪来from:', from)
 
     // 标题栏内容 = 新页面的标题
     document.title = to.meta.title

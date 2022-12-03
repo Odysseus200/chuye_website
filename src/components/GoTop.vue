@@ -1,7 +1,5 @@
 <template>
-  <div id="GoTop" @click="GoTop()">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </div>
+   <div id="GoTop" @click="GoTop()"> <span class="glyphicon glyphicon-chevron-up"></span> </div>
 </template>
 <script>
 export default {

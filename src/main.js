@@ -5,12 +5,6 @@ import App from './App'
 /* 路由 */
 import router from './router'
 
-/* axios */
-import axios from './api'
-import api from './api/api'
-Vue.prototype.http = axios;
-Vue.prototype.api = api;
-
 /* swiper */
 import 'swiper/dist/css/swiper.min.css';
 
@@ -48,14 +42,12 @@ Vue.component(GoTop.name,GoTop)
 
 Vue.config.productionTip = false
 
-
-router.beforeEach((to, from, next) => {
-    if(to.meta.title){
-      document.title = to.meta.title
-    }
-    next();
-});
-
+// router.beforeEach((to, from, next) => {
+//     if(to.meta.title){
+//       document.title = to.meta.title
+//     }
+//     next();
+// });
 
 new Vue({
   router,

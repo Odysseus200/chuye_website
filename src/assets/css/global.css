@@ -106,7 +106,7 @@
     transform: rotate(180deg);
   }
   /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
-  #header .header-nav .header-nav-wrapper > li.active > a {
+  #header .header-nav .header-nav-wrapper > a.active {
     color: #0368b7;
     text-decoration: none;
     border-bottom: 2px solid #0368b7;

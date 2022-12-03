@@ -1,24 +1,5 @@
 <template>
-  <div id="smartTown">
-    <h2>加固施工案例</h2>
-    <el-table
-      :data="tableData"
-      style="width: 100%;font-size: 19px;white-space:nowrap;"
-      stripe
-      fit
-      size="medium"
-      >>
-      <el-table-column prop="num" label="序号" align="center" width="70px">
-      </el-table-column>
-      <el-table-column
-        prop="pro3"
-        label="项目地点"
-        align="center"
-        show-overflow-tooltip
-      >
-      </el-table-column>
-    </el-table>
-  </div>
+  <div id="smartTown"> <h2>加固施工案例</h2> <el-table :data="tableData" style="width: 100%;font-size: 19px;white-space:nowrap;" stripe fit size="medium" >> <el-table-column prop="num" label="序号" align="center" width="70px"> </el-table-column> <el-table-column prop="pro3" label="项目地点" align="center" show-overflow-tooltip > </el-table-column> </el-table> </div>
 </template>
 <script>
 export default {

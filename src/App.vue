@@ -1,21 +1,7 @@
 <template>
-  <div id="app">
-    <!-- <Header></Header> -->
-    <router-view />
-    <Footer />
-    <!-- <GoTop></GoTop> -->
-  </div>
+  <div id="app"> <Header/> <router-view/> <Footer/> </div>
 </template>
-
 <script>
-export default {
-  name: "App",
-  methods: {
-    showRoute() {
-      console.log("$route:", this.$route);
-    }
-  }
-};
+export default { name: "App"};
 </script>
-
 <style></style>
