@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-import HomePage from '../view/HomePage.vue'
-
+import HomePage from '@/view/HomePage.vue'
  const routes = [
     {
       path: '*',
@@ -15,12 +14,12 @@ import HomePage from '../view/HomePage.vue'
           name: 'home',
           component: HomePage,
           meta: {
-            title: '首页'
+            title: '云南楚业建筑工程有限公司'
           }
         }, {
           path: '/Example',
           name: 'Example',
-          component: ()=> import('@/view/Example'),
+          component: () => import('../view/Example.vue'),
           meta: {
             title: '工程案例'
           },
@@ -32,7 +31,7 @@ import HomePage from '../view/HomePage.vue'
             {
               path: '/Example/ReinforcementDesign',
               name: 'Example_ReinforcementDesign',
-              component: () => import('@/view/ReinforcementDesign'),
+              component:() => import('@/view/ReinforcementDesign.vue'),
               meta: {
                 title: '工程案例丨加固设计'
               }
@@ -75,14 +74,14 @@ import HomePage from '../view/HomePage.vue'
           name: 'service',
           component: () => import('@/view/Service'),
           meta: {
-            title: '相关服务'
+            title: '现场实例'
           }
         }, {
           path: '/newsinformation',
           name: 'newsinformation',
           component: () => import('@/view/NewsInformation'),
           meta: {
-            title: '新闻动态'
+            title: '公司动态'
           }
         }, {
           path: '/companyintroduction',
@@ -108,19 +107,8 @@ import HomePage from '../view/HomePage.vue'
         }
       ]
   const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
     routes
-  })
-
- router.beforeEach((to, from, next) => {
-    // console.log('到哪去to:', to)
-    // console.log('从哪来from:', from)
-
-    // 标题栏内容 = 新页面的标题
-    document.title = to.meta.title
-
-    // 调用后, 放行本次操作, 路由才能跳转
-    next()
   })
   export default router

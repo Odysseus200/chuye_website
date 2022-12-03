@@ -9,28 +9,7 @@ export default {
   name: "Example",
   data() {
     return {
-      softwareList: [
-        {
-          path: "/Example/ReinforcementDesign",
-          name: "加固设计"
-        },
-        {
-          path: "/Example/Construction",
-          name: "加固施工"
-        },
-        {
-          path: "/Example/shejishigon",
-          name: "加固设计施工"
-        },
-        {
-          path: "/Example/newDesign",
-          name: "新建设计"
-        },
-        {
-          path: "/Example/newCustra",
-          name: "新建施工"
-        }
-      ]
+      softwareList: [{path: "/Example/ReinforcementDesign", name: "加固设计"},{path: "/Example/Construction", name: "加固施工"},{path: "/Example/shejishigon", name: "加固设计施工"},{path: "/Example/newDesign", name: "新建设计"},{path: "/Example/newCustra", name: "新建施工"}]
     };
   },
   mounted() {

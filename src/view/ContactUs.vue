@@ -29,33 +29,5 @@ export default {
 };
 </script>
 <style scoped>
-.banner {
-  color: #fff;
-  font-size: 30px;
-  height: 150px;
-  line-height: 150px;
-  background-image: url("../assets/img/banner_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center center;
-}
-.ContactUs-container {
-  padding: 80px 0;
-  transition: all ease 0.5s;
-  box-sizing: border-box;
-}
-#map {
-  width: 100%;
-  height: 365px;
-}
-.row {
-  margin-right: 0;
-  margin-left: 0;
-}
-@media screen and (max-width: 997px) {
-  .ContactUs-container {
-    padding: 20px 0;
-  }
-}
+.banner{color: #fff; font-size: 30px; height: 150px; line-height: 150px; background-image: url("~@/assets/img/banner_1.jpg"); background-repeat: no-repeat; background-size: cover; background-attachment: scroll; background-position: center center;}.ContactUs-container{padding: 80px 0; transition: all ease 0.5s; box-sizing: border-box;}#map{width: 100%; height: 365px;}.row{margin-right: 0; margin-left: 0;}@media screen and (max-width: 997px){.ContactUs-container{padding: 20px 0;}}
 </style>

@@ -115,7 +115,7 @@
   #header .header-nav .header-nav-wrapper > li > dl {
     display: none;
     position: absolute;
-    width: 168px;
+    width: 135px;
     top: 80%;
     left: 0;
     z-index: 999999;
@@ -128,9 +128,13 @@
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }
+  #header .header-nav .header-nav-wrapper > li > dl > dt > a{
+    font-size: 18px;
+  }
   /* 导航栏 每个导航下面的二级导航容器的每个导航 当鼠标滑上时的样式*/
   #header .header-nav .header-nav-wrapper > li > dl > dt > a:hover {
     text-decoration: none;
+    color:#0368b7;
   }
   /* 导航栏 滑上一级导航显示二级导航 */
   #header .header-nav .header-nav-wrapper > li:hover dl {
